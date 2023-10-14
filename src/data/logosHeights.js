@@ -1,4 +1,4 @@
-export const logos = {
+export const logosHeights = {
   react: {
     height: "h-6 sm:h-7 2xl:h-8",
     image: "react.webp",

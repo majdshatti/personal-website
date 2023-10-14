@@ -6,7 +6,7 @@ import {
   removeCursorEvents,
 } from "../utils/cursor";
 import { projects } from "../data/projectsData";
-import { logos } from "../data/logos";
+import { logosHeights } from "../data/logosHeights";
 import { withLoader } from "/src/components/HOC";
 
 const ProjectDetails = () => {
@@ -170,7 +170,7 @@ const ProjectDetails = () => {
             <img
               key={index}
               src={skill.image}
-              className={logos[skill.name].height + " w-auto"}
+              className={logosHeights[skill.name].height + " w-auto"}
             />
           ))}
         </div>

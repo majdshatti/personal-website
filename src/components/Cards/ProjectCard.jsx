@@ -3,7 +3,7 @@ import {
   handleMouseEnterForProject,
   handleMouseLeaveForProject,
 } from "../../utils/cursor";
-import { logos } from "/src/data/logos.js";
+import { logosHeights } from "/src/data/logosHeights.js";
 
 export const ProjectCard = ({ project }) => {
   return (
@@ -29,7 +29,7 @@ export const ProjectCard = ({ project }) => {
           <img
             key={index}
             src={skill.image}
-            className={logos[skill.name].height + " w-auto"}
+            className={logosHeights[skill.name].height + " w-auto"}
           />
         ))}
       </div>
