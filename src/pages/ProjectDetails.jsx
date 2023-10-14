@@ -170,7 +170,10 @@ const ProjectDetails = () => {
             <img
               key={index}
               src={skill.image}
-              className={logosHeights[skill.name].height + " w-auto"}
+              className={
+                (logosHeights[skill.name].height ?? "h-7 sm:h-8 2xl:h-9") +
+                " w-auto"
+              }
             />
           ))}
         </div>
