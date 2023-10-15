@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Section, SectionHeader } from "/src/components/Section";
+import { skillsData } from "../../data/skillsData";
+import { experienceData } from "../../data/experienceData";
 
 export const About = () => {
   const [allSkills, setAllSkills] = useState([]);
@@ -7,93 +9,12 @@ export const About = () => {
   const filterListRef = useRef(null);
   const filterButtonRef = useRef(null);
   const [isFilterListOpen, setIsFilterListOpen] = useState(false);
+  const [experience, setExperience] = useState([]);
 
   useEffect(() => {
-    const skills = [
-      {
-        name: "HTML/CSS/JS",
-        categories: ["frontend"],
-      },
-      {
-        name: "PHP",
-        categories: ["backend"],
-      },
-      {
-        name: "Laravel",
-        categories: ["frontend", "backend"],
-      },
-      {
-        name: "Typescript",
-        categories: ["frontend", "backend"],
-      },
-      {
-        name: "Express",
-        categories: ["backend"],
-      },
-      {
-        name: "Nest.js",
-        categories: ["backend"],
-      },
-      {
-        name: "Redis",
-        categories: ["database", "caching"],
-      },
-      {
-        name: "Tailwind",
-        categories: ["frontend"],
-      },
-      {
-        name: "Vite",
-        categories: ["frontend"],
-      },
-      {
-        name: "React.js",
-        categories: ["frontend"],
-      },
-      {
-        name: "AWS (IAM/S3/EC2)",
-        categories: ["cloud"],
-      },
-      {
-        name: "Mysql",
-        categories: ["database"],
-      },
-      {
-        name: "MongoDB",
-        categories: ["database"],
-      },
-      {
-        name: "Typeorm",
-        categories: ["database"],
-      },
-      {
-        name: "Mongoose",
-        categories: ["database"],
-      },
-      {
-        name: "Socket.io",
-        categories: ["real-time"],
-      },
-      {
-        name: "Pusher",
-        categories: ["real-time"],
-      },
-      {
-        name: "Server Deployment",
-        categories: ["server", "deployment"],
-      },
-      {
-        name: "Linux",
-        categories: ["server", "deployment"],
-      },
-      {
-        name: "Nginx",
-        categories: ["server", "deployment"],
-      },
-    ];
-
-    setAllSkills(skills);
-    setFilteredSkills(skills);
+    setExperience(experienceData);
+    setAllSkills(skillsData);
+    setFilteredSkills(skillsData);
   }, []);
 
   useEffect(() => {
@@ -150,68 +71,38 @@ export const About = () => {
           {/* <div className="bg-prim-200 absolute top-0 bottom-0 -left-10 w-px"></div> */}
           <h3 className="text-3xl 2xl:text-4xl font-bold">Work Experience</h3>
           <div>
-            <div className="mt-10 relative">
-              {/* <div className="absolute w-3 h-3 rounded-full bg-prim-300 -left-[45px] top-3"></div>
-              <div className="absolute w-3 h-3 rounded-full text-prim-300 -left-36 top-[7px] whitespace-nowrap text-sm italic">
-                12/22-10/23
-              </div> */}
-              <h4 className="text-xl lg:text-2xl 2xl:text-3xl">
-                FullStack Developer{" "}
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://pan-code.com"
-                  className="def-link mono text-prim-500"
-                >
-                  @Pancode
-                </a>
-              </h4>
-              <p className="text-sm md:text-base mt-2 text-gray-400">
-                07/21-12/21
-              </p>
-              <p className="sm:text-lg md:text-xl mt-4 text-gray-300">
-                <ul className="list-disc pl-4">
-                  <li className="mt-3">
-                    Played a key role in developing Laravel projects.
-                  </li>
-                  <li className="mt-3">
-                    Actively participated in project planning and requirements
-                    gathering sessions. Throughout the development process, I
-                    collaborated with designers, front-end developers to ensure
-                    seamless integration and deliver exceptional user
-                    experiences.
-                  </li>
-                  <li className="mt-3">
-                    Gained exposure to deploying and hosting applications,
-                    albeit in a limited capacity. I assisted with the deployment
-                    of landing websites, working alongside server administrators
-                    to ensure smooth transitions from development to production
-                    environments.
-                  </li>
-                </ul>
-              </p>
-            </div>
-            <div className="mt-10 relative">
-              {/* <div className="absolute w-3 h-3 rounded-full bg-prim-300 -left-[45px] top-3"></div>
-              <div className="absolute w-3 h-3 rounded-full text-prim-300 -left-36 top-[7px] whitespace-nowrap text-sm italic">
-                07/21-12/21
-              </div> */}
-              <h4 className="text-xl lg:text-2xl 2xl:text-3xl">
-                Backend Developer{" "}
-                <a className="mono text-prim-500">@GrayScale</a>
-              </h4>
-              <p className="text-sm md:text-base mt-2 text-gray-400">
-                07/21-12/21
-              </p>
-              <p className="sm:text-lg md:text-xl mt-4 text-gray-300">
-                During my three-month internship at GrayScale, I dedicated my
-                time to intensive learning and skill development in the field of
-                web development. While I did not participate in specific
-                projects, this experience allowed me to focus on honing my
-                technical skills and gaining a deeper understanding of key
-                concepts in software engineering.
-              </p>
-            </div>
+            {experience.map((exp, index) => (
+              <div key={index} className="mt-10 relative">
+                <h4 className="text-xl lg:text-2xl 2xl:text-3xl">
+                  {exp.title}{" "}
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://pan-code.com"
+                    className="def-link mono text-prim-500"
+                  >
+                    @{exp.company.name}
+                  </a>
+                </h4>
+                <p className="text-sm md:text-base mt-2 text-gray-400">
+                  {exp.fromDate} - {exp.toDate}
+                </p>
+                {exp.description && (
+                  <p className="sm:text-lg md:text-xl mt-4 text-gray-300">
+                    {exp.description}
+                  </p>
+                )}
+                <p className="sm:text-lg md:text-xl mt-4 text-gray-300">
+                  <ul className="list-disc pl-4">
+                    {exp.keyPoints.map((text, liIndex) => (
+                      <li key={"li-" + liIndex} className="mt-3">
+                        {text}
+                      </li>
+                    ))}
+                  </ul>
+                </p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="2xl:col-span-3">
