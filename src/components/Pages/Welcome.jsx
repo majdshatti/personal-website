@@ -15,7 +15,7 @@ export const Welcome = () => {
       },
       {
         duration: 2,
-        width: window.screen.width > 640 ? "16em" : "14.5em",
+        width: window.screen.width > 640 ? "13.8em" : "14.5em",
         ease: SteppedEase.config(37),
       },
       0
