@@ -15,7 +15,7 @@ export const Welcome = () => {
       },
       {
         duration: 2,
-        width: window.screen.width > 640 ? "13.8em" : "14.5em",
+        width: window.screen.width > 640 ? "16em" : "14.5em",
         ease: SteppedEase.config(37),
       },
       0
@@ -63,7 +63,7 @@ export const Welcome = () => {
           href="#about-section"
           className="sm:text-lg lg:text-xl 2xl:text-2xl w-fit text-white font-light mt-10 flex items-center gap-x-2 def-link"
         >
-          Let's dive in
+          {"Let's"} dive in
           <img src={"/svg/arrow-down.svg"} className="w-6 mt-1" />
         </a>
       </div>
