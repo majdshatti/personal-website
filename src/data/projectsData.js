@@ -6,7 +6,7 @@ export const projects = [
     association: null,
     role: "Fullstack Developer",
     nextProject: "tasharuk",
-    prevProject: "us-incorporated",
+    prevProject: "marmani",
     showcase: {
       type: "images",
       data: [
@@ -44,6 +44,10 @@ export const projects = [
       {
         name: "tailwind",
         image: "/images/logos/tailwind.svg",
+      },
+      {
+        name: "nginx",
+        image: "/images/logos/nginx.png",
       },
     ],
     sections: [
@@ -284,12 +288,12 @@ export const projects = [
         items: [
           {
             order: 1,
-            body: "Gathered requirements and led the design process for the KFC project, resulting in a comprehensive Entity-Relationship Diagram (ERD)",
+            body: "Gathered requirements and led the design process for the Syria KFC project, resulting in a comprehensive Entity-Relationship Diagram (ERD)",
             attachments: [],
           },
           {
             order: 2,
-            body: "Implemented the admin dashbaord",
+            body: "Implemented the admin dashboard",
             attachments: [],
           },
           {
@@ -310,7 +314,7 @@ export const projects = [
       url: "https://pan-code.com",
     },
     role: "Fullstack Developer",
-    nextProject: "go-pro-ksa",
+    nextProject: "marmani",
     prevProject: "syria-kfc",
     showcase: {
       type: "images",
@@ -352,6 +356,73 @@ export const projects = [
           {
             order: 2,
             body: "Implemented an http service for registering products warranties",
+            attachments: [],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Marmani",
+    slug: "marmani",
+    url: "https://marmani.ae",
+    association: null,
+    role: "Fullstack Developer",
+    nextProject: "go-pro-ksa",
+    prevProject: "us-incorporated",
+    showcase: {
+      type: "images",
+      data: [],
+    },
+    skills: [
+      {
+        name: "nest",
+        image: "/images/logos/nest.webp",
+      },
+      {
+        name: "typeorm",
+        image: "/images/logos/typeorm.png",
+      },
+      {
+        name: "react",
+        image: "/images/logos/react.webp",
+      },
+      {
+        name: "mysql",
+        image: "/images/logos/mysql.png",
+      },
+      {
+        name: "vite",
+        image: "/images/logos/vite.svg",
+      },
+      {
+        name: "nginx",
+        image: "/images/logos/nginx.png",
+      },
+    ],
+    sections: [
+      {
+        type: "paragraph",
+        body: "Marmani offers a streamlined approach to diverse courses, ensuring a personalized and accessible educational experience through adaptive learning features.",
+        order: 1,
+      },
+      {
+        type: "list",
+        order: 2,
+        items: [
+          {
+            order: 1,
+            body: "Implemented the admin dashboard",
+            attachments: [],
+          },
+          {
+            order: 2,
+            body: "Implemented API interface for the landing website.",
+            attachments: [],
+          },
+          {
+            order: 3,
+            body: "Deployed Website, Dashboard and API into the server using Nginx.",
             attachments: [],
           },
         ],
