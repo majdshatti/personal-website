@@ -15,7 +15,7 @@ export const Projects = () => {
       <SectionHeader>02. Projects</SectionHeader>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 mt-4 sm:mt-6 md:mt-10 lg:mt-12 xl:mt-14 2xl:mt-16">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard key={index} project={project} index={index} />
         ))}
       </div>
     </Section>

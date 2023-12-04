@@ -3,8 +3,15 @@ import { Home } from "./pages";
 import { Cursor } from "./components/Common/Cursor";
 import { ProjectDetails } from "./pages/ProjectDetails";
 import { NotFound } from "./components/Pages/NotFound";
+import AOS from "aos";
+
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <Cursor />

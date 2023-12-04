@@ -57,7 +57,11 @@ export const About = () => {
   return (
     <Section id="about-section">
       <SectionHeader>01. About</SectionHeader>
-      <p className="text-prim-50 sm:text-lg md:text-xl mt-2 sm:mt-6 md:mt-10 lg:mt-12 xl:mt-14 2xl:mt-16 2xl:w-[80%]">
+      <p
+        data-aos="fade-down"
+        data-aos-duration="2000"
+        className="text-prim-50 sm:text-lg md:text-xl mt-2 sm:mt-6 md:mt-10 lg:mt-12 xl:mt-14 2xl:mt-16 2xl:w-[80%]"
+      >
         Hi, my name is Majd Al-Shatti and I am a software engineer with a strong
         foundation in web application development. While I possess the skills
         and expertise to excel in full-stack development, my true passion lies
@@ -69,11 +73,21 @@ export const About = () => {
       <div className="mt-12 grid grid-cols-1 2xl:grid-cols-12 dark:text-white gap-10">
         <div className="2xl:col-span-9 relative">
           {/* <div className="bg-prim-200 absolute top-0 bottom-0 -left-10 w-px"></div> */}
-          <h3 className="text-3xl 2xl:text-4xl font-bold">Work Experience</h3>
+          <h3
+            className="text-3xl 2xl:text-4xl font-bold"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            Work Experience
+          </h3>
           <div>
             {experience.map((exp, index) => (
               <div key={index} className="mt-10 relative">
-                <h4 className="text-xl lg:text-2xl 2xl:text-3xl">
+                <h4
+                  className="text-xl lg:text-2xl 2xl:text-3xl"
+                  data-aos="fade-down"
+                  data-aos-duration="1200"
+                >
                   {exp.title}{" "}
                   <a
                     rel="noreferrer"
@@ -84,16 +98,28 @@ export const About = () => {
                     @{exp.company.name}
                   </a>
                 </h4>
-                <p className="text-sm md:text-base mt-2 text-gray-400">
+                <p
+                  className="text-sm md:text-base mt-2 text-gray-400"
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                >
                   {exp.fromDate} - {exp.toDate}
                 </p>
                 {exp.description && (
-                  <p className="sm:text-lg md:text-xl mt-4 text-gray-300">
+                  <p
+                    className="sm:text-lg md:text-xl mt-4 text-gray-300"
+                    data-aos="fade-left"
+                    data-aos-duration="1200"
+                  >
                     {exp.description}
                   </p>
                 )}
                 <p className="sm:text-lg md:text-xl mt-4 text-gray-300">
-                  <ul className="list-disc pl-4">
+                  <ul
+                    className="list-disc pl-4"
+                    data-aos="fade-left"
+                    data-aos-duration="1200"
+                  >
                     {exp.keyPoints.map((text, liIndex) => (
                       <li key={"li-" + liIndex} className="mt-3">
                         {text}
@@ -167,12 +193,24 @@ export const About = () => {
           </div>
           <div className="flex gap-4 flex-wrap mt-10">
             {filteredSkills.map((skill, index) => (
-              <span
+              <div
                 key={index}
-                className="bg-prim-900 bg-opacity-10 text-prim-300 px-4 py-2 rounded-full text-sm lg:text-base h-fit"
+                className={
+                  "bg-prim-900 bg-opacity-10 text-prim-300 px-4 py-2 rounded-full text-sm lg:text-base h-fit"
+                }
+                data-aos={
+                  ["fade-up", "fade-down", "fade-left", "fade-right"][
+                    Math.round(Math.random() * (3 - 0) + 0)
+                  ]
+                }
+                data-aos-duration={Math.round(
+                  ["3000", "2500", "2000", "1500"][
+                    Math.round(Math.random() * (3 - 0) + 0)
+                  ]
+                )}
               >
                 {skill.name}
-              </span>
+              </div>
             ))}
           </div>
         </div>

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { gsap, SteppedEase } from "gsap";
 import { Sky } from "/src/components/Common";
-
 export const Welcome = () => {
   useEffect(() => {
     const typingAnimation = gsap.timeline({
@@ -47,10 +46,19 @@ export const Welcome = () => {
 
       <div className="w-[90%] sm:w-[50%] h-fit mx-auto">
         {/* Hi */}
-        <p className="text-sm md:text-lg mono text-white">Hi, my name is </p>
+        <p
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          className="text-sm md:text-lg mono text-white"
+        >
+          Hi, my name is
+        </p>
         {/* Name */}
         <h1 className="text-[2.75rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] font-bold dark:text-white sm:mt-4 md:mt-5 lg:mt-6">
-          <span className=" whitespace-nowrap text-prim-500">
+          <span
+            data-aos="fade-down"
+            className=" whitespace-nowrap text-prim-500"
+          >
             Majd Al-Shatti
           </span>
         </h1>
@@ -62,6 +70,8 @@ export const Welcome = () => {
         <a
           href="#about-section"
           className="sm:text-lg lg:text-xl 2xl:text-2xl w-fit text-white font-light mt-10 flex items-center gap-x-2 def-link"
+          data-aos="fade-left"
+          data-aos-duration="2000"
         >
           {"Let's"} dive in
           <img src={"/svg/arrow-down.svg"} className="w-6 mt-1" />

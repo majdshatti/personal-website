@@ -26,13 +26,28 @@ export const TopNav = () => {
             <div className="h-[2px] rounded-full bg-white w-3"></div>
           </div>
           <div className="hidden md:flex items-center gap-x-7 dark:text-white text-xl font-bold">
-            <a href="#about-section" className="def-link  text-[1rem] mono">
+            <a
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              href="#about-section"
+              className="def-link  text-[1rem] mono"
+            >
               <span className="text-prim-500">01.</span> About
             </a>
-            <a href="#projects-section" className="def-link  text-[1rem] mono">
+            <a
+              data-aos="fade-down"
+              data-aos-duration="1500"
+              href="#projects-section"
+              className="def-link  text-[1rem] mono"
+            >
               <span className="text-prim-500">02.</span> Projects
             </a>
-            <a href="#contact-section" className="def-link  text-[1rem] mono">
+            <a
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              href="#contact-section"
+              className="def-link  text-[1rem] mono"
+            >
               <span className="text-prim-500">03.</span> Contact
             </a>
           </div>

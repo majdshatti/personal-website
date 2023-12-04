@@ -7,18 +7,21 @@ export const Socials = () => {
         <SocialLink
           href="https://www.github.com/majdshatti"
           imageSrc={"/svg/github.svg"}
+          duration={1000}
         >
           @majdshatti
         </SocialLink>
         <SocialLink
           href="https://www.linkedin.com/in/majd-shatti"
           imageSrc={"/svg/linkedin.svg"}
+          duration={1500}
         >
           in/majdshatti
         </SocialLink>
         <SocialLink
           href="https://www.gitlab.com/majdshatti"
           imageSrc={"/svg/gitlab.svg"}
+          duration={2000}
         >
           @majdshatti
         </SocialLink>
