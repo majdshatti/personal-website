@@ -43,4 +43,8 @@ export const logosHeights = {
     height: "h-4 sm:h-5 2xl:h-6",
     image: "tailwind.svg",
   },
+  nginx: {
+    height: "h-4 sm:h-5 2xl:h-4",
+    image: "nginx.png",
+  },
 };
