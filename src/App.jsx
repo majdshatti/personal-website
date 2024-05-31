@@ -6,7 +6,6 @@ import { NotFound } from "./components/Pages/NotFound";
 import AOS from "aos";
 
 import { useEffect } from "react";
-import GTM from "./components/Common/GTM";
 
 function App() {
   useEffect(() => {
@@ -15,7 +14,6 @@ function App() {
 
   return (
     <>
-      <GTM />
       <Cursor />
       <Router>
         <Routes>
